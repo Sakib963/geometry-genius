@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Geometry Genius</title>
+        <!-- Play CDN for Tailwind CSS and DaisyUi Link -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome Link -->
+        <script src="https://kit.fontawesome.com/1f3975a7ed.js"
+            crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <header class="mt-4 md:mt-10 mx-4 md:mx-12">
+            <!-- Navbar from DaisyUi and Modified it as per project requirement -->
+            <div class="navbar bg-[#1090d81a] px-2 md:px-10 py-3 md:py-5
+                rounded-lg">
+                <div class="flex-1">
+                    <div class="flex flex-col pl-1 md:pl-3">
+                        <h1 class="text-3xl md:text-5xl text-bl font-bold">Interactive</h1>
+                        <p class="text-xl md:text-3xl text-neutral-500">Geometry
+                            Genius</p>
+                    </div>
+                </div>
+                <div class="flex-none gap-2">
+                    <div class="form-control">
+                    </div>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0">
+                            <div class="rounded-full">
+                                <a href="blog.html" class="py-2 md:py-2 px-4
+                                    md:px-9
+                                    bg-[#1090D8] rounded-lg text-white text-lg
+                                    md:text-xl font-bold">Blog</a>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="grid lg:grid-cols-4 mx-4 md:mx-12 gap-5 mt-10">
+                <!-- Cards Container -->
+                <div class="col-span-3 grid md:grid-cols-3 gap-4">
+                    <!-- Geometry Cards from DaisyUi -->
+                    <!-- Card triangle -->
+                    <div class="card border border-[#1111111a] pb-9 rounded-lg"
+                        id="card-triangle">
+                        <figure class="px-10 pt-10">
+                            <img src="images/triangle.png" alt="Triangle"/>
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Triangle</h2>
+                            <p class="text-[#414141]">Area (A) = 0.5 <i
+                                    class="fa-solid fa-xmark p-1"></i>
+                                b <i class="fa-solid fa-xmark p-1"></i> h</p>
+                            <div class="grid grid-cols-8 w-[80%] mx-auto gap-3">
+                                <input type="number" placeholder="b" id=""
+                                    class="input-sm bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3">
+                                <p class="py-1 text-center">cm</p>
+                                <input type="number" placeholder="h" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                            </div>
+                        </div>
+                        <button class="bg-[#1090D8] py-3 w-[80%] mx-auto
+                            text-white font-bold text-xl rounded-lg"
+                            id="triangle-btn">Calculate</button>
+                    </div>
+                    <!-- Card rectangle -->
+                    <div class="card border border-[#1111111a] pb-9 rounded-lg"
+                        id="card-rectangle">
+                        <figure class="px-10 pt-10">
+                            <img src="images/rectangle.png" alt="Rectangle" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Rectangle</h2>
+                            <p class="text-[#414141]">Area (A) = w <i
+                                    class="fa-solid fa-xmark p-1"></i>
+                                l</p>
+                            <div class="grid grid-cols-8 w-[80%] mx-auto gap-3">
+                                <input type="number" placeholder="w" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                                <input type="number" placeholder="l" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                            </div>
+                        </div>
+                        <button class="bg-[#1090D8] py-3 w-[80%] mx-auto
+                            text-white font-bold text-xl rounded-lg"
+                            id="rectangle-btn">Calculate</button>
+                    </div>
+                    <!-- Card parallelogram -->
+                    <div class="card border border-[#1111111a] pb-9 rounded-lg"
+                        id="card-parallelogram">
+                        <figure class="px-10 pt-10">
+                            <img src="images/parallelogram.png"
+                                alt="Parallelogram" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Parallelogram</h2>
+                            <p class="text-[#414141]">Area (A) = b <i
+                                    class="fa-solid fa-xmark p-1"></i>
+                                h</p>
+                            <div class="grid grid-cols-8 w-[80%] mx-auto gap-3">
+                                <input type="number" placeholder="b" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                                <input type="number" placeholder="h" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                            </div>
+                        </div>
+                        <button class="bg-[#1090D8] py-3 w-[80%] mx-auto
+                            text-white font-bold text-xl rounded-lg"
+                            id="parallelogram-btn">Calculate</button>
+                    </div>
+                    <!-- Card rhombus -->
+                    <div class="card border border-[#1111111a] pb-9 rounded-lg"
+                        id="card-rhombus">
+                        <figure class="px-10 pt-10">
+                            <img src="images/rhombus.png" alt="Rhombus" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Rhombus</h2>
+                            <p class="text-[#414141]">Area (A) = 0.5 <i
+                                    class="fa-solid fa-xmark p-1"></i> d<sub>1</sub>
+                                <i class="fa-solid fa-xmark p-1"></i>
+                                d<sub>2</sub></p>
+                            <div class="grid grid-cols-8 w-[80%] mx-auto gap-3">
+                                <input type="number" placeholder="d1" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                                <input type="number" placeholder="d2" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                            </div>
+                        </div>
+                        <button class="bg-[#1090D8] py-3 w-[80%] mx-auto
+                            text-white font-bold text-xl rounded-lg"
+                            id="rhombus-btn">Calculate</button>
+                    </div>
+                    <!-- Card pentagon -->
+                    <div class="card border border-[#1111111a] pb-9 rounded-lg"
+                        id="card-pentagon">
+                        <figure class="px-10 pt-10">
+                            <img src="images/pentagon.png" alt="Pentagon" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Pentagon</h2>
+                            <p class="text-[#414141]">Area (A) = 0.5 <i
+                                    class="fa-solid fa-xmark p-1"></i> p <i
+                                    class="fa-solid fa-xmark p-1"></i>
+                                b</p>
+                            <div class="grid grid-cols-8 w-[80%] mx-auto gap-3">
+                                <input type="number" placeholder="p" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                                <input type="number" placeholder="b" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                            </div>
+                        </div>
+                        <button class="bg-[#1090D8] py-3 w-[80%] mx-auto
+                            text-white font-bold text-xl rounded-lg"
+                            id="pentagon-btn">Calculate</button>
+                    </div>
+                    <!-- Card ellipse -->
+                    <div class="card border border-[#1111111a] pb-9 rounded-lg"
+                        id="card-ellipse">
+                        <figure class="px-10 pt-10">
+                            <img src="images/ellipse.png" alt="Ellipse" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Ellipse</h2>
+                            <p class="text-[#414141] flex">Area (A) = &#960;ab</p>
+                            <div class="grid grid-cols-8 w-[80%] mx-auto gap-3">
+                                <input type="number" placeholder="a" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                                <input type="number" placeholder="b" id=""
+                                    class="bg-[#F1F1F1] py-1 rounded-md
+                                    col-span-3 input-sm">
+                                <p class="py-1 text-center">cm</p>
+                            </div>
+                        </div>
+                        <button class="bg-[#1090D8] py-3 w-[80%] mx-auto
+                            text-white font-bold text-xl rounded-lg"
+                            id="ellipse-btn">Calculate</button>
+                    </div>
+                </div>
+                <!-- Area Calculation Container -->
+                <div class="grid grid-cols-1 col-span-3 lg:col-span-1 mb-9
+                    lg:mb-0">
+                    <div class="card border border-[#1111111a] rounded-lg h-full
+                        lg:h-2/5 mb-9">
+                        <h1 class="mt-5 text-xl font-bold underline
+                            text-center">Area Calculation</h1>
+                        <div class="overflow-x-auto lg:px-2">
+                            <table class="w-full mt-4 table-normal">
+                                <!-- head -->
+                                <thead>
+                                </thead>
+                                <tbody id="table-container">
+                                    <!-- row 1 -->
+                                    <!--
+                                <tr>
+                                  <th>1</th>
+                                  <td>Cy Ganderton</td>
+                                  <td>Quality Control Specialist</td>
+                                  <td>Blue</td>
+                                </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- JS File Link -->
+        <script src="js/app.js"></script>
+    </body>
+</html>

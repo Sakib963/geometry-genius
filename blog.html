@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM Answers</title>
+        <!-- Play CDN for Tailwind CSS and DaisyUi Link -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+            rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <header class="mt-4 md:mt-10 mx-4 md:mx-12">
+            <!-- Navbar from DaisyUi and Modified it as per project requirement -->
+            <div class="navbar bg-[#1090d81a] px-2 md:px-10 py-3 md:py-5
+                rounded-lg">
+                <div class="flex-1">
+                    <div class="flex flex-col pl-1 md:pl-3">
+                        <h1 class="text-3xl md:text-5xl text-bl font-bold">Interactive</h1>
+                        <p class="text-xl md:text-3xl text-neutral-500">Geometry
+                            Genius</p>
+                    </div>
+                </div>
+                <div class="flex-none gap-2">
+                    <div class="form-control">
+                    </div>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0">
+                            <div class="rounded-full">
+                                <a href="index.html" class="py-2 md:py-2 px-4
+                                    md:px-9
+                                    bg-[#1090D8] rounded-lg text-white text-lg
+                                    md:text-xl font-bold">Home</a>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Alert Section -->
+            <section class="mx-4 md:mx-12 mt-10">
+                <div class="alert alert-success shadow-lg">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="stroke-current flex-shrink-0 h-6 w-6"
+                            fill="none" viewBox="0 0 24 24"><path
+                                stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0
+                                11-18 0 9 9 0 0118 0z" /></svg>
+                            <span class="font-semibold">I tried my best to
+                                answer from my notes. Images that are used in
+                                this page are also from my github repo. My notes
+                                are <a
+                                    href="https://github.com/Sakib963/practicing-dom"
+                                    class="link link-secondary">here</a></span>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider"></div>
+                <!-- Question Answers of Assignment -->
+                <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-4
+                    md:mx-12 mt-10 mb-16">
+                    <div class="shadow-sm rounded-md p-6 border">
+                        <h1 class="text-xl lg:text-3xl font-bold text-center
+                            mt-4">What is DOM and what is the purpose of DOM?</h1>
+                        <p class="font-medium my-2">DOM is an programming
+                            interface for HTML document. When a web page loads
+                            on browser, that html document get converted into a
+                            DOM tree. DOM defines the events for all html
+                            documents, method to access all html elements, the
+                            properties of all html documents and all html
+                            elements as an object.</p>
+                        <p class="font-medium my-2">We can use DOM to manipulate
+                            html and css elements, also we can react to events.
+                            We can do below things using DOM: </p>
+                        <ul class="font-medium my-2 list-disc px-6">
+                            <li>Change all the HTML elements in the page.</li>
+                            <li>Change all the HTML attributes in the page.</li>
+                            <li>Change all the CSS styles in the page.</li>
+                            <li>Remove existing HTML elements and attributes.</li>
+                            <li>Add new HTML elements and attributes.</li>
+                            <li>React to all existing HTML events in the page.</li>
+                        </ul>
+                    </div>
+                    <div class="shadow-sm rounded-md p-6 border">
+                        <h1 class="text-3xl font-bold text-center mt-4">How will
+                            you select HTML elements using DOM? Name the DOM
+                            methods.</h1>
+                        <p class="font-medium my-2">We can select html elements
+                            in 4 ways. These are: </p>
+                        <ul class="font-medium my-2 list-disc px-6">
+                            <li>getElementById()</li>
+                            <li>getElementsByClassName()</li>
+                            <li>getElementsByTagName()</li>
+                            <li>querySelector() & querySelectorAll()</li>
+                        </ul>
+                        <p class="font-medium my-2">If we want a single item in
+                            DOM, then we can use getElementById() method, it
+                            will require an unique id as parameter. By using
+                            getElementsByClassName, we can get an array-like
+                            object which contains all the child element of the
+                            given class name. We can traverse the array-like
+                            object by index. Similarly, we can get all the
+                            elements of the same tag name. querySelectorAll will
+                            return a node list and querySelector will return
+                            first matching element.</p>
+                    </div>
+                    <div class="shadow-sm rounded-md p-6 border">
+                        <h1 class="text-3xl font-bold text-center mt-4">What is
+                            event bubble?</h1>
+                        <p class="font-medium my-4">Event Bubbling is a concept
+                            in the DOM (Document Object Model). It happens when
+                            an element receives an event, and that event bubbles
+                            up (or you can say is transmitted or propagated) to
+                            its parent and ancestor elements in the DOM tree
+                            until it gets to the root element.</p>
+                        <img
+                            src="https://user-images.githubusercontent.com/66853064/218594323-4c3f8de8-a9d8-4114-9eef-5be9c5c24826.PNG"
+                            alt="My Note" class="rounded-lg">
+                    </div>
+                    <div class="shadow-sm rounded-md p-6 border">
+                        <h1 class="text-3xl font-bold text-center mt-4">What is
+                            a callback function and why will you use it?</h1>
+                        <p class="font-medium my-4">After searching on google, I
+                            understood that a callback function is accessible by
+                            other functions, a function passed into another
+                            function as an argument, and invoked after first
+                            function if that first function completes. I tried
+                            to implement callback function in event listener.</p>
+                        <img src="images/codeJs.PNG" alt="My Code"
+                            class="rounded-md mx-auto">
+                        <p class="font-medium my-2">Inside this program, I've
+                            used print function as a callback function. I passed
+                            this function as a parameter of another function.</p>
+                    </div>
+
+                </section>
+            </main>
+        </body>
+    </html>
